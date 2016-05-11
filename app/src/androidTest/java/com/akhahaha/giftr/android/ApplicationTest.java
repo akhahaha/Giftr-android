@@ -1,4 +1,4 @@
-package com.akhahaha.android.giftr;
+package com.akhahaha.giftr.android;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

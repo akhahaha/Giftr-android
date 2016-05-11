@@ -1,4 +1,4 @@
-package com.akhahaha.android.giftr;
+package com.akhahaha.giftr.android;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
