@@ -2,19 +2,26 @@ package com.akhahaha.giftr.android;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import com.akhahaha.giftr.android.event.Event;
+import com.akhahaha.giftr.android.flow.GiftrFlow;
+import com.akhahaha.giftr.android.view.ViewFragment;
+
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener,
+        ViewFragment.OnFragmentInteractionListener {
+    private GiftrFlow giftrFlow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Setup flow controller
+        giftrFlow = new GiftrFlow(this, R.id.main_fragment_placeholder);
     }
 
     @Override
@@ -97,5 +107,15 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return giftrFlow.handleEvent(event) || super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onFragmentInteraction(Event event) {
+        giftrFlow.handleEvent(event);
     }
 }
