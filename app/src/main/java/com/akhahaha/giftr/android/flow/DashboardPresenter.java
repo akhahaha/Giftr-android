@@ -25,6 +25,11 @@ public class DashboardPresenter extends Presenter {
     public boolean handleEvent(Event event) {
         Presenter nextPresenter;
         switch (event.getEventTag()) {
+            case DashboardExchangeFragment.EVENT_MATCH_FIND_NEW:
+                nextPresenter = new FindExchangePresenter(currUID);
+                nextPresenter.setPrevPresenter(this);
+                notifyListeners(nextPresenter);
+                return true;
             default:
                 return false;
         }

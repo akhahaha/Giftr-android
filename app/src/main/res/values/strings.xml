@@ -17,6 +17,7 @@
     <string name="placeholder_gender">Gender</string>
     <string name="placeholder_match_age">Match Age</string>
     <string name="placeholder_match_status">Match Status</string>
+    <string name="placeholder_search">Search</string>
 
     <string name="text_interests">Interests</string>
     <string name="text_new_match">New Match</string>
