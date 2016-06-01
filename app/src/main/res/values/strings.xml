@@ -5,4 +5,20 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="contentdesc_profile_image">Profile image</string>
+
+    <string name="pref_curr_uid">PREF_CURR_UID</string>
+
+    <string name="placeholder_username">Username</string>
+    <string name="placeholder_location">Location</string>
+    <string name="placeholder_age">Age</string>
+    <string name="placeholder_interests">Interests text</string>
+    <string name="placeholder_gender">Gender</string>
+    <string name="placeholder_match_age">Match Age</string>
+    <string name="placeholder_match_status">Match Status</string>
+
+    <string name="text_interests">Interests</string>
+    <string name="text_new_match">New Match</string>
+    <string name="text_no_pending_exchanges">You have no pending exchanges.</string>
 </resources>

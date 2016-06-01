@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".view.DashboardProfileFragment">
+
+    <ImageView
+        android:id="@+id/dashboard_profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorDivider"
+        android:contentDescription="@string/contentdesc_profile_image" />
+
+    <TextView
+        android:id="@+id/dashboard_profile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dashboard_profile_image"
+        android:padding="5dp"
+        android:text="@string/placeholder_username"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/dashboard_profile_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dashboard_profile_username"
+        android:padding="5dp"
+        android:text="@string/placeholder_age" />
+
+    <TextView
+        android:id="@+id/dashboard_profile_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dashboard_profile_username"
+        android:layout_toEndOf="@+id/dashboard_profile_age"
+        android:padding="5dp"
+        android:text="@string/placeholder_gender" />
+
+    <TextView
+        android:id="@+id/dashboard_profile_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dashboard_profile_username"
+        android:layout_toEndOf="@+id/dashboard_profile_gender"
+        android:padding="5dp"
+        android:text="@string/placeholder_location" />
+
+    <TextView
+        android:id="@+id/dashboard_profile_interests_descriptor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dashboard_profile_gender"
+        android:padding="5dp"
+        android:text="@string/text_interests"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/dashboard_profile_interests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dashboard_profile_interests_descriptor"
+        android:padding="5dp"
+        android:text="@string/placeholder_interests" />
+</RelativeLayout>

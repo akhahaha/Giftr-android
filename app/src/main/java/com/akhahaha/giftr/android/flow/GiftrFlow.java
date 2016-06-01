@@ -24,5 +24,7 @@ public class GiftrFlow extends FlowController {
             currUID = 1; // TODO: Implement login
             settingsEditor.putInt(getActivity().getString(R.string.pref_curr_uid), currUID);
         }
+
+        setPresenter(new DashboardPresenter(currUID));
     }
 }
