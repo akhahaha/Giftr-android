@@ -1,5 +1,9 @@
 Giftr-android
 =================================================
+    UCLA CS 130
+    Professor Paul Eggert
+    Spring 2016
+    
     Aaron Cheng     ac4466@gmail.com
     Alan Kha        akhahaha@gmail.com
     Andrew Tran     andrewhamanhtran@gmail.com
